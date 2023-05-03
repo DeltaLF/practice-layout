@@ -1,0 +1,32 @@
+.navbar {
+  background-color: var(--color-black);
+  height: 8rem;
+  display: flex;
+  .left {
+    flex: 1;
+    .logo {
+      color: var(--color-white);
+      font-size: 2rem;
+      font-weight: 800;
+      width: 50%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .right {
+    color: var(--color-white);
+    flex: 1;
+    .links {
+      font-size: 1.2rem;
+      width: 70%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+}
