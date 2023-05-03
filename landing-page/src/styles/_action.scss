@@ -5,19 +5,21 @@
   justify-content: center;
   .container {
     background-color: var(--color-primary);
+    padding-right: 2rem;
     height: 35%;
-    width: 60%;
+    width: 70%;
     border-radius: 8px;
     display: flex;
+    justify-content: space-between;
+
     .left {
       color: var(--color-white);
-      flex: 0.75;
+      flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
       .content {
-        width: 60%;
-        height: 50%;
+        width: 90%;
       }
       h3 {
         font-size: 1.4rem;
@@ -27,10 +29,32 @@
       }
     }
     .right {
-      flex: 0.25;
       display: flex;
       justify-content: start;
       align-items: center;
+    }
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    .container {
+      width: 90%;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+    h4 {
+      font-size: 0.8rem;
+    }
+  }
+  @media only screen and (max-width: $bp-small) {
+    .container {
+      width: 95%;
+      height: 50%;
+      margin: 0;
+      padding: 0 0 2rem 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

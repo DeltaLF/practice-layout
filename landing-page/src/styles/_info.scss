@@ -1,5 +1,4 @@
 .info {
-  height: 60vh;
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -13,10 +12,12 @@
   &__content {
     width: 80%;
     height: 60%;
+    margin-bottom: 5rem;
 
     .info__cards {
-      display: flex;
-      justify-content: space-evenly;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      justify-items: center;
       height: 100%;
 
       .info__card {

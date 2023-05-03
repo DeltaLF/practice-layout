@@ -1,5 +1,5 @@
 .main {
-  height: 60vh;
+  // height: 60vh;
   background-color: var(--color-black);
   display: flex;
   justify-content: center;
@@ -7,10 +7,13 @@
   .content {
     height: 60%;
     width: 75%;
-    display: flex;
+    margin: 3rem auto 10rem auto;
+    row-gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
     .left {
       padding-top: 3rem;
-      flex: 1;
       h1 {
         color: var(--color-white);
         font-size: 3rem;
@@ -25,13 +28,27 @@
     }
     .right {
       height: 80%;
-      margin-left: 3rem;
-      background-color: var(--color-gray);
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: var(--color-white);
+
+      .image {
+        margin: auto;
+        background-color: var(--color-gray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30rem;
+        height: 15rem;
+        color: var(--color-white);
+      }
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      width: 95%;
+      grid-template-columns: 1fr;
+      .right {
+        .image {
+          width: 90%;
+        }
+      }
     }
   }
 }

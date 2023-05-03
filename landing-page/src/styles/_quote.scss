@@ -1,11 +1,10 @@
 .quote {
-  height: 50vh;
   background-color: var(--color-light-gray);
   display: flex;
   justify-content: center;
   align-items: center;
   .content {
-    margin-top: 3rem;
+    margin: 5rem auto;
     width: 50%;
     height: 50%;
   }
@@ -18,5 +17,13 @@
     font-size: 1.2rem;
     margin: 1rem 2rem 1rem 0;
     float: right;
+  }
+  @media only screen and (max-width: $bp-large) {
+    .content {
+      width: 80%;
+      p {
+        font-size: 1.2rem;
+      }
+    }
   }
 }
